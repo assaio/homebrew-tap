@@ -5,21 +5,21 @@
 class AssaioAgent < Formula
   desc "Is your AI coding spend delivering? Offline, per-project analytics for Claude Code, Codex, Gemini CLI, and Cline."
   homepage "https://github.com/assaio/assaio"
-  version "0.24.0"
+  version "0.25.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/assaio/assaio/releases/download/v0.24.0/assaio_0.24.0_darwin_amd64.tar.gz"
-      sha256 "f9b813d48a46dc25e77caad957ed8ae1db669a012750408c14e2d5086fb2e872"
+      url "https://github.com/assaio/assaio/releases/download/v0.25.0/assaio_0.25.0_darwin_amd64.tar.gz"
+      sha256 "d1d7fef49378775e8d4f0f50b7e73de53ad1ebad117e93a28f462a0596709ecc"
 
       define_method(:install) do
         bin.install "assaio-agent"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/assaio/assaio/releases/download/v0.24.0/assaio_0.24.0_darwin_arm64.tar.gz"
-      sha256 "d3bcf4bbed00bb1036fce46d9ae34c6000008ecf82be9f9476e560594469c463"
+      url "https://github.com/assaio/assaio/releases/download/v0.25.0/assaio_0.25.0_darwin_arm64.tar.gz"
+      sha256 "8e3169eba4d206d408f6c03c6bb2483ef651b4289bcd9f11703bb1cf6bc10876"
 
       define_method(:install) do
         bin.install "assaio-agent"
@@ -29,15 +29,15 @@ class AssaioAgent < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/assaio/assaio/releases/download/v0.24.0/assaio_0.24.0_linux_amd64.tar.gz"
-      sha256 "f75c1edfcd57af838a05e15d463558ea8b3ce3cbe46614059a55a9a2f7c7b751"
+      url "https://github.com/assaio/assaio/releases/download/v0.25.0/assaio_0.25.0_linux_amd64.tar.gz"
+      sha256 "e0e889f3eba382e1e2851ab30a945b503c4d97ffab380d440add956ebe0478a9"
       define_method(:install) do
         bin.install "assaio-agent"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/assaio/assaio/releases/download/v0.24.0/assaio_0.24.0_linux_arm64.tar.gz"
-      sha256 "394e4a1fe384f8ef87c5ad2e4a23dc98090668d889272fa61c4dec675532af15"
+      url "https://github.com/assaio/assaio/releases/download/v0.25.0/assaio_0.25.0_linux_arm64.tar.gz"
+      sha256 "1bf8accc210a979f79204fa36beeb780591b498e5a89abe6be7049fdbafa6729"
       define_method(:install) do
         bin.install "assaio-agent"
       end
